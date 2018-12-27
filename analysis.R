@@ -58,7 +58,8 @@ by_type_city_stacked_barplot =
   xlab("Град") + ylab(paste0("Број на настани групирани по вид\nвкупно ", sum(n_crimes_by_type_city$n_crimes), " од 06.04.11 до 24.12.18 (извор: crimemap.finki.ukim.mk)")) + 
   labs(fill = "Вид на настан")
 
-ggsave(by_type_city_stacked_barplot, filename = paste0(result_dir, "by_type_city_stacked_barplot"), device=cairo_pdf, width = 15, height = 9, units = "in", dpi = 300)
+ggsave(by_type_city_stacked_barplot, filename = paste0(result_dir, "by_type_city_stacked_barplot.pdf"), device=cairo_pdf, width = 15, height = 9, units = "in", dpi = 300)
+ggsave(by_type_city_stacked_barplot, filename = paste0(result_dir, "by_type_city_stacked_barplot.png"), device="png", width = 15, height = 9, units = "in", dpi = 300)
 
 # plot a barplot of crimes by city and by type using position_dodge
 by_type_city_barplot = 
@@ -72,8 +73,8 @@ by_type_city_barplot =
   xlab("Град") + ylab(paste0("Број на настани групирани по вид\nвкупно ", sum(n_crimes_by_type_city$n_crimes), " од 06.04.11 до 24.12.18 (извор: crimemap.finki.ukim.mk)")) + 
   labs(fill = "Вид на настан")
 
-ggsave(by_type_city_barplot, filename = paste0(result_dir, "by_type_city_barplot"), device=cairo_pdf, width = 15, height = 9, units = "in", dpi = 300)
-
+ggsave(by_type_city_barplot, filename = paste0(result_dir, "by_type_city_barplot.pdf"), device=cairo_pdf, width = 15, height = 9, units = "in", dpi = 300)
+ggsave(by_type_city_barplot, filename = paste0(result_dir, "by_type_city_barplot.png"), device="png", width = 15, height = 9, units = "in", dpi = 300)
 
 
 
@@ -94,7 +95,8 @@ by_date_barplot =
   xlab("Датум") + ylab(paste0("Број на настани\nвкупно ", sum(n_crimes_by_type_city$n_crimes), " од 06.04.11 до 24.12.18 (извор: crimemap.finki.ukim.mk)")) + 
   labs(fill = "Град") 
 
-ggsave(by_date_barplot, filename = paste0(result_dir, "by_date_barplot"), device=cairo_pdf, width = 15, height = 9, units = "in", dpi = 300)
+ggsave(by_date_barplot, filename = paste0(result_dir, "by_date_barplot.pdf"), device=cairo_pdf, width = 15, height = 9, units = "in", dpi = 300)
+ggsave(by_date_barplot, filename = paste0(result_dir, "by_date_barplot.png"), device="png", width = 15, height = 9, units = "in", dpi = 300)
 
 by_date_city_stacked_barplot = 
   ggplot(data = n_crimes_by_date_city, aes(x = datum_format, y = n_crimes, fill = grad)) +
@@ -106,8 +108,8 @@ by_date_city_stacked_barplot =
    xlab("Датум") + ylab(paste0("Број на настани групирани по град\nвкупно ", sum(n_crimes_by_type_city$n_crimes), " од 06.04.11 до 24.12.18 (извор: crimemap.finki.ukim.mk)")) + 
    labs(fill = "Град")
 
-ggsave(by_date_city_stacked_barplot, filename = paste0(result_dir, "by_date_city_stacked_barplot"), device=cairo_pdf, width = 15, height = 9, units = "in", dpi = 300)
-
+ggsave(by_date_city_stacked_barplot, filename = paste0(result_dir, "by_date_city_stacked_barplot.pdf"), device=cairo_pdf, width = 15, height = 9, units = "in", dpi = 300)
+ggsave(by_date_city_stacked_barplot, filename = paste0(result_dir, "by_date_city_stacked_barplot.png"), device="png", width = 15, height = 9, units = "in", dpi = 300)
 
 
 
